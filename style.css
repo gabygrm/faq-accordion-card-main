@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+body{
+  background-image: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 0.75rem;
+  padding: 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+h1{
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(238, 29%, 16%);
+}
+
+.card{
+
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    max-width: 56rem;
+
+    position: relative;
+
+    background-color: white;
+    
+
+}
+
+.faq, .picture-container{
+  flex:1;
+}
+.picture-container{
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: 100% 70%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+
+    max-width: 30rem;
+
+}
+
+.womam-picture{
+  transform: translateX(-5rem);
+}
+
+.picture-box{
+  position: absolute;
+  top: 45%;
+  left: 0;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  
+}
+/*  Acordeon part */
+
+.faq{
+  padding: 5rem 5rem 5rem 1rem;
+}
+.acordeon {
+
+
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    
+    border-bottom-style: solid;
+    border-color: hsl(240, 5%, 91%) ;
+    border-bottom-width: 1px;
+
+    background-color: white;
+
+    padding: 1rem 1rem 0.8rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.acordeon:hover{
+    color: hsl(14, 88%, 65%);
+}
+  
+  /* .active, .acordeon:hover {
+    background-color: #ccc;
+    
+  } */
+  
+  .acordeon::after {
+    content: "";
+    display: block;
+    width: 0.625rem;
+    height: 0.625rem;
+    background-image: url(../images/icon-arrow-down.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all .4s ease-in-out;
+  }
+  
+  .active::after {
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+  }
+
+
+
+  
+  .panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    color: hsl(240, 6%, 50%);
+  }
+
+  @media screen and (max-width: 900px){
+    .faq, .picture-container{
+      flex-direction: column;
+      flex: auto;
+    }
+
+    .picture-box{
+      display: none;
+
+    }
+
+
+    .card{
+      margin: 0rem;
+      width: 100%;
+    }
+
+    .picture-container{
+      position: relative;
+      max-width: 16rem;
+      top: -7rem;
+      overflow: visible;
+      position: absolute;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+
+      background-size: cover;
+      background-position: 30% 60%;
+
+
+      
+    }
+
+    .womam-picture{
+      transform: translateX(0%);
+      max-width: 18rem;
+      
+      
+    }
+
+    h1{
+      text-align: center;
+    }
+
+    .faq{
+      padding: 7rem 1.5rem 3rem 1.5rem;
+    }
+
+  }

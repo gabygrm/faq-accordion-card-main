@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+
   
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
@@ -15,26 +17,41 @@
   </style>
 </head>
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+  <div class="card">
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+    <img src="./images/illustration-box-desktop.svg" alt="box" class="picture-box">
+    
+    <picture class="picture-container">
+      <source media="(max-width: 376px)" srcset="images/bg-pattern-mobile.svg" class="womam-picture">
+      <img src="images/illustration-woman-online-desktop.svg" alt="woman" class="womam-picture">
+      
+  </picture>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+  <div class="faq">
+  <h1>FAQ</h1>
+  <button class="acordeon">How many team members can I invite?</button>
+  <div class="panel"><p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+  team members for the Premium plan.</p></div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <button class="acordeon">What is the maximum file upload size?</button>
+  <div class="panel"><p>No more than 2GB. All files in your account must fit your allotted storage space.</p></div>
+
+  <button class="acordeon">How do I reset my password?</button>
+  <div class="panel"><p>Click “Forgot password” from the login page or “Change password” from your profile page.
+  A reset link will be emailed to you.</p></div>
+
+  <button class="acordeon">Can I cancel my subscription?</button>
+  <div class="panel"><p>Yes! Send us a message and we’ll process your request no questions asked.</p></div>
+
+  <button class="acordeon">Do you provide additional support?</button>
+  <div class="panel"><p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p></div>
+
+</div>
+</div>
+
+
+<script src="./script.js"></script>
 </body>
 </html>
